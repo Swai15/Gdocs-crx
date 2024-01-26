@@ -3,13 +3,19 @@
   "name": "My First Extension",
   "version": "1.0",
   "description": "A basic Chrome extension",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "images/placeholder.png",
       "48": "images/placeholder.png",
       "128": "images/placeholder.png"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/*"],
+      "js": ["content/contentScript.js"]
+    }
+  ]
 }

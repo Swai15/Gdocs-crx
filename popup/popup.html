@@ -1,0 +1,22 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css" />
+    <title>My Extension Popup</title>
+  </head>
+  <body>
+    <div id="tagging-interface">
+      <h2>Add tags to entry</h2>
+      <input type="text" id="tagsInput" placeholder="Enter tags..." />
+      <button id="addTag-button">Add Tag</button>
+    </div>
+
+    <div id="tag-list">
+      <h2>Tag List</h2>
+      <ul id="tagList"></ul>
+    </div>
+  </body>
+  <script src="../content/popup.js"></script>
+  <script src="../content/contentScript.js"></script>
+</html>
