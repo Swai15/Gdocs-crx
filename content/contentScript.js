@@ -1,25 +1,3 @@
-// Check if svg element is a heading
-// function isHeadingElement(element) {
-//   const ariaLabel = element.getAttribute("aria-label") || "";
-//   const lowerAriaLabel = ariaLabel.toLowerCase();
-
-//   const minHeightH1 = 31.999999999999996;
-//   const minHeightH2 = 25.599999999999998;
-//   const minHeightBody = 17.599999999999998;
-
-//   const elementHeight = parseFloat(element.getAttribute("height")) || 0;
-
-//   const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
-//   const isMonth = months.some((month) => lowerAriaLabel.includes(month));
-
-//   const daysOfWeek = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
-//   const isDayOfWeek = daysOfWeek.some((day) => lowerAriaLabel.includes(day));!isDayOfWeek && !isMonth && elementHeight >= minHeightBody;
-
-//   const isNotInBody = !isDayOfWeek && !isMonth && elementHeight >= minHeightBody;
-
-// }
-
-// contentScript.js
 
 // Function to check if a given SVG element represents a heading
 function isHeadingElement(element) {
@@ -72,7 +50,7 @@ parentDivs.forEach((parentDiv) => {
       if (isHeading) {
         groupedElement.classList.add("taggable-entry-heading-group");
       } else {
-        groupedElement.classList.add("taggable-entry-paragraph-group");
+        groupedElement.classList.add("taggable-entry-paragraph-group"); 
       }
     });
   });
